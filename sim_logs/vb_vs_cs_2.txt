@@ -1,0 +1,16 @@
+  ... 50/666 deals, A +2118.6 bb/100 so far
+  ... 100/666 deals, A +1938.0 bb/100 so far
+  ... 150/666 deals, A +2104.8 bb/100 so far
+  ... 200/666 deals, A +2083.9 bb/100 so far
+  ... 250/666 deals, A +2176.2 bb/100 so far
+  ... 300/666 deals, A +2198.8 bb/100 so far
+  ... 350/666 deals, A +2266.5 bb/100 so far
+  ... 400/666 deals, A +2242.2 bb/100 so far
+  ... 450/666 deals, A +2258.4 bb/100 so far
+  ... 500/666 deals, A +2197.8 bb/100 so far
+  ... 550/666 deals, A +2237.0 bb/100 so far
+  ... 600/666 deals, A +2289.6 bb/100 so far
+  ... 650/666 deals, A +2266.3 bb/100 so far
+
+A=pot_odds:range=1,value=1,bluff=1 vs B=calling_station | 666 deals x 2 seats = 1332 hands | seed 1
+A win rate: +2255.2 bb/100 (95% CI +/- 183.2)

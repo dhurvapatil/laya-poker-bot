@@ -1,0 +1,29 @@
+  ... 50/1333 deals, A +7.6 bb/100 so far
+  ... 100/1333 deals, A +20.9 bb/100 so far
+  ... 150/1333 deals, A +27.4 bb/100 so far
+  ... 200/1333 deals, A +40.7 bb/100 so far
+  ... 250/1333 deals, A +47.1 bb/100 so far
+  ... 300/1333 deals, A +47.9 bb/100 so far
+  ... 350/1333 deals, A +64.6 bb/100 so far
+  ... 400/1333 deals, A +67.0 bb/100 so far
+  ... 450/1333 deals, A +69.4 bb/100 so far
+  ... 500/1333 deals, A +79.4 bb/100 so far
+  ... 550/1333 deals, A +77.5 bb/100 so far
+  ... 600/1333 deals, A +81.5 bb/100 so far
+  ... 650/1333 deals, A +85.2 bb/100 so far
+  ... 700/1333 deals, A +82.1 bb/100 so far
+  ... 750/1333 deals, A +74.9 bb/100 so far
+  ... 800/1333 deals, A +74.1 bb/100 so far
+  ... 850/1333 deals, A +76.8 bb/100 so far
+  ... 900/1333 deals, A +77.3 bb/100 so far
+  ... 950/1333 deals, A +77.1 bb/100 so far
+  ... 1000/1333 deals, A +74.3 bb/100 so far
+  ... 1050/1333 deals, A +73.4 bb/100 so far
+  ... 1100/1333 deals, A +74.5 bb/100 so far
+  ... 1150/1333 deals, A +74.6 bb/100 so far
+  ... 1200/1333 deals, A +83.8 bb/100 so far
+  ... 1250/1333 deals, A +86.6 bb/100 so far
+  ... 1300/1333 deals, A +85.7 bb/100 so far
+
+A=pot_odds:range=1,value=1,bluff=1 vs B=pot_odds:range=1 | 1333 deals x 2 seats = 2666 hands | seed 1
+A win rate: +81.7 bb/100 (95% CI +/- 31.3)

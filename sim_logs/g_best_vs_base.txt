@@ -1,0 +1,38 @@
+/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1887.46it/s]
+  ... 50/1000 deals, A +10.0 bb/100 so far
+  ... 100/1000 deals, A +34.9 bb/100 so far
+  ... 150/1000 deals, A +52.2 bb/100 so far
+  ... 200/1000 deals, A +93.9 bb/100 so far
+  ... 250/1000 deals, A +88.5 bb/100 so far
+  ... 300/1000 deals, A +74.6 bb/100 so far
+  ... 350/1000 deals, A +84.6 bb/100 so far
+  ... 400/1000 deals, A +75.8 bb/100 so far
+  ... 450/1000 deals, A +69.2 bb/100 so far
+  ... 500/1000 deals, A +67.7 bb/100 so far
+  ... 550/1000 deals, A +64.6 bb/100 so far
+  ... 600/1000 deals, A +62.5 bb/100 so far
+  ... 650/1000 deals, A +54.4 bb/100 so far
+  ... 700/1000 deals, A +50.3 bb/100 so far
+  ... 750/1000 deals, A +59.7 bb/100 so far
+  ... 800/1000 deals, A +59.6 bb/100 so far
+  ... 850/1000 deals, A +54.1 bb/100 so far
+  ... 900/1000 deals, A +60.4 bb/100 so far
+  ... 950/1000 deals, A +58.5 bb/100 so far
+  ... 1000/1000 deals, A +62.1 bb/100 so far
+
+A=laya:rich=1,range=1,guard=1,preflop=1,alpha=0.5,model=checkpoints/laya-poker-flat vs B=laya:range=1,guard=1 | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +62.1 bb/100 (95% CI +/- 32.2)
+
+Laya (A): 6799 decisions | latency p50 24.7 ms, p95 27.0 ms | mean answer_confidence 0.88 | max state tokens 228
+  preflop  call 67%, check 14%, third_pot 9%, fold 8%, pot 2%, allin 1%
+  flop     check 46%, fold 23%, call 12%, third_pot 9%, pot 5%, two_thirds_pot 4%, allin 1%
+  turn     check 59%, fold 15%, pot 9%, call 8%, third_pot 5%, two_thirds_pot 4%, allin 1%
+  river    check 68%, fold 12%, two_thirds_pot 7%, pot 5%, call 3%, third_pot 3%, allin 1%
+
+Laya (B): 6207 decisions | latency p50 25.1 ms, p95 26.4 ms | mean answer_confidence 0.49 | max state tokens 220
+  preflop  call 39%, pot 26%, check 15%, third_pot 10%, two_thirds_pot 7%, fold 3%
+  flop     check 40%, pot 26%, call 12%, two_thirds_pot 7%, fold 7%, third_pot 7%, allin 1%
+  turn     check 57%, pot 13%, fold 11%, call 7%, two_thirds_pot 5%, third_pot 5%, allin 1%
+  river    check 67%, fold 12%, pot 9%, two_thirds_pot 3%, third_pot 3%, call 3%, allin 2%

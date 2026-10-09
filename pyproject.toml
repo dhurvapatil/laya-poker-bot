@@ -1,0 +1,6 @@
+[project]
+name = "poker-bot"
+version = "0.1.0"
+description = "Heads-up no-limit hold'em simulator for testing Laya as a poker decision model"
+requires-python = ">=3.11"
+dependencies = ["laya>=0.3.20"]

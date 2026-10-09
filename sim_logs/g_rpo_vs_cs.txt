@@ -1,0 +1,23 @@
+  ... 50/1000 deals, A +539.0 bb/100 so far
+  ... 100/1000 deals, A +564.6 bb/100 so far
+  ... 150/1000 deals, A +576.5 bb/100 so far
+  ... 200/1000 deals, A +540.8 bb/100 so far
+  ... 250/1000 deals, A +528.2 bb/100 so far
+  ... 300/1000 deals, A +506.2 bb/100 so far
+  ... 350/1000 deals, A +498.4 bb/100 so far
+  ... 400/1000 deals, A +515.7 bb/100 so far
+  ... 450/1000 deals, A +501.4 bb/100 so far
+  ... 500/1000 deals, A +511.7 bb/100 so far
+  ... 550/1000 deals, A +529.9 bb/100 so far
+  ... 600/1000 deals, A +521.7 bb/100 so far
+  ... 650/1000 deals, A +525.3 bb/100 so far
+  ... 700/1000 deals, A +518.3 bb/100 so far
+  ... 750/1000 deals, A +512.8 bb/100 so far
+  ... 800/1000 deals, A +514.2 bb/100 so far
+  ... 850/1000 deals, A +508.5 bb/100 so far
+  ... 900/1000 deals, A +505.8 bb/100 so far
+  ... 950/1000 deals, A +509.4 bb/100 so far
+  ... 1000/1000 deals, A +503.5 bb/100 so far
+
+A=pot_odds:range=1 vs B=calling_station | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +503.5 bb/100 (95% CI +/- 52.6)

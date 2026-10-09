@@ -1,0 +1,58 @@
+/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1742.40it/s]
+  ... 50/2000 deals, A -14.9 bb/100 so far
+  ... 100/2000 deals, A +135.4 bb/100 so far
+  ... 150/2000 deals, A +104.7 bb/100 so far
+  ... 200/2000 deals, A +97.7 bb/100 so far
+  ... 250/2000 deals, A +84.4 bb/100 so far
+  ... 300/2000 deals, A +86.3 bb/100 so far
+  ... 350/2000 deals, A +89.7 bb/100 so far
+  ... 400/2000 deals, A +69.3 bb/100 so far
+  ... 450/2000 deals, A +72.2 bb/100 so far
+  ... 500/2000 deals, A +64.7 bb/100 so far
+  ... 550/2000 deals, A +79.4 bb/100 so far
+  ... 600/2000 deals, A +74.2 bb/100 so far
+  ... 650/2000 deals, A +84.5 bb/100 so far
+  ... 700/2000 deals, A +78.8 bb/100 so far
+  ... 750/2000 deals, A +83.8 bb/100 so far
+  ... 800/2000 deals, A +74.9 bb/100 so far
+  ... 850/2000 deals, A +71.4 bb/100 so far
+  ... 900/2000 deals, A +72.8 bb/100 so far
+  ... 950/2000 deals, A +72.5 bb/100 so far
+  ... 1000/2000 deals, A +79.8 bb/100 so far
+  ... 1050/2000 deals, A +74.9 bb/100 so far
+  ... 1100/2000 deals, A +71.9 bb/100 so far
+  ... 1150/2000 deals, A +79.4 bb/100 so far
+  ... 1200/2000 deals, A +76.7 bb/100 so far
+  ... 1250/2000 deals, A +79.6 bb/100 so far
+  ... 1300/2000 deals, A +75.8 bb/100 so far
+  ... 1350/2000 deals, A +77.8 bb/100 so far
+  ... 1400/2000 deals, A +76.1 bb/100 so far
+  ... 1450/2000 deals, A +71.9 bb/100 so far
+  ... 1500/2000 deals, A +75.4 bb/100 so far
+  ... 1550/2000 deals, A +73.8 bb/100 so far
+  ... 1600/2000 deals, A +70.8 bb/100 so far
+  ... 1650/2000 deals, A +62.2 bb/100 so far
+  ... 1700/2000 deals, A +63.4 bb/100 so far
+  ... 1750/2000 deals, A +61.1 bb/100 so far
+  ... 1800/2000 deals, A +60.7 bb/100 so far
+  ... 1850/2000 deals, A +57.4 bb/100 so far
+  ... 1900/2000 deals, A +57.5 bb/100 so far
+  ... 1950/2000 deals, A +61.6 bb/100 so far
+  ... 2000/2000 deals, A +55.2 bb/100 so far
+
+A=laya:rich=1,range=1,guard=1,preflop=1,model=checkpoints/laya-poker-flat vs B=laya:range=1,guard=1 | 2000 deals x 2 seats = 4000 hands | seed 1
+A win rate: +55.2 bb/100 (95% CI +/- 31.6)
+
+Laya (A): 14470 decisions | latency p50 24.9 ms, p95 27.2 ms | mean answer_confidence 0.87 | max state tokens 229
+  preflop  call 68%, check 14%, third_pot 9%, fold 7%, pot 2%, allin 1%
+  flop     check 52%, fold 21%, call 15%, third_pot 6%, two_thirds_pot 4%, pot 0%, allin 0%
+  turn     check 65%, fold 13%, call 11%, two_thirds_pot 7%, pot 2%, third_pot 2%, allin 0%
+  river    check 67%, fold 14%, two_thirds_pot 13%, call 5%, allin 1%, third_pot 0%, pot 0%
+
+Laya (B): 12882 decisions | latency p50 25.4 ms, p95 26.8 ms | mean answer_confidence 0.48 | max state tokens 222
+  preflop  call 38%, pot 26%, check 14%, third_pot 12%, two_thirds_pot 7%, fold 3%, allin 0%
+  flop     check 44%, pot 27%, third_pot 9%, call 8%, two_thirds_pot 7%, fold 4%, allin 1%
+  turn     check 61%, pot 15%, third_pot 7%, fold 6%, two_thirds_pot 5%, call 4%, allin 2%
+  river    check 65%, pot 11%, fold 11%, third_pot 5%, two_thirds_pot 4%, call 3%, allin 1%

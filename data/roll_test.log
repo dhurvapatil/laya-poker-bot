@@ -1,0 +1,12 @@
+  20/60 sessions, 648 rows, 5.4 rows/s
+  40/60 sessions, 1761 rows, 8.8 rows/s
+  60/60 sessions, 2942 rows, 10.7 rows/s
+2942 postflop rows -> data/roll_test.flat.jsonl
+  flop       865 rows | best: allin 27%, check 23%, pot 22%, fold 13%, call 7%, third_pot 6%, two_thirds_pot 3%
+  turn      1088 rows | best: allin 35%, check 31%, pot 15%, fold 8%, call 4%, third_pot 4%, two_thirds_pot 4%
+  river      989 rows | best: allin 42%, check 38%, fold 6%, third_pot 5%, pot 4%, two_thirds_pot 3%, call 2%
+  bet/raise is the best action in 56.2% of spots
+    vs calling_station 59.5%
+    vs loose           47.6%
+    vs pot_odds        55.7%
+  mean EV gap best - 2nd best 12.53 bb (median 1.88), best - worst 36.92 bb; mean max target 0.80

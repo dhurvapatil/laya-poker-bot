@@ -1,0 +1,35 @@
+
+A=laya:tree=1,rich=1,range=1,guard=1 vs B=pot_odds | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +155.9 bb/100 (95% CI +/- 63.3)
+
+Laya (A): 6645 decisions | latency p50 37.8 ms, p95 59.0 ms | mean answer_confidence 0.46 | max state tokens 227
+  preflop  check 28%, call 25%, third_pot 15%, two_thirds_pot 13%, pot 10%, fold 8%, allin 0%
+  flop     check 50%, fold 17%, call 13%, third_pot 7%, two_thirds_pot 6%, pot 6%, allin 1%
+  turn     check 57%, fold 15%, call 10%, third_pot 7%, pot 5%, two_thirds_pot 4%, allin 2%
+  river    check 65%, fold 15%, call 7%, two_thirds_pot 5%, pot 3%, third_pot 3%, allin 2%
+======
+
+A=laya:range=1,guard=1 vs B=pot_odds | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +243.2 bb/100 (95% CI +/- 69.4)
+
+Laya (A): 6693 decisions | latency p50 42.3 ms, p95 69.0 ms | mean answer_confidence 0.51 | max state tokens 217
+  preflop  call 38%, pot 26%, check 14%, third_pot 11%, two_thirds_pot 9%, fold 2%, allin 0%
+  flop     check 35%, pot 21%, call 17%, fold 12%, third_pot 7%, two_thirds_pot 7%, allin 1%
+  turn     check 45%, fold 16%, pot 14%, call 13%, third_pot 6%, two_thirds_pot 5%, allin 2%
+  river    check 53%, fold 17%, pot 11%, call 8%, third_pot 5%, two_thirds_pot 3%, allin 2%
+
+A=laya:tree=1,rich=1,range=1,guard=1 vs B=laya:range=1,guard=1 | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: -30.7 bb/100 (95% CI +/- 64.8)
+CI crosses 0 -> not significant, run more deals
+
+Laya (A): 6150 decisions | latency p50 53.6 ms, p95 93.0 ms | mean answer_confidence 0.47 | max state tokens 228
+  preflop  call 33%, fold 16%, check 14%, third_pot 14%, two_thirds_pot 12%, pot 10%, allin 1%
+  flop     check 52%, fold 19%, call 11%, third_pot 7%, two_thirds_pot 5%, pot 5%, allin 2%
+  turn     check 63%, fold 13%, call 7%, two_thirds_pot 6%, third_pot 6%, pot 4%, allin 2%
+  river    check 70%, fold 11%, call 5%, two_thirds_pot 4%, third_pot 4%, pot 4%, allin 2%
+
+Laya (B): 5597 decisions | latency p50 27.8 ms, p95 51.6 ms | mean answer_confidence 0.46 | max state tokens 222
+  preflop  call 45%, pot 24%, third_pot 13%, two_thirds_pot 7%, fold 6%, check 6%, allin 0%
+  flop     check 45%, pot 24%, call 10%, third_pot 8%, fold 6%, two_thirds_pot 6%, allin 1%
+  turn     check 60%, pot 13%, fold 9%, call 6%, third_pot 6%, two_thirds_pot 4%, allin 2%
+  river    check 69%, pot 10%, fold 9%, two_thirds_pot 4%, call 3%, third_pot 3%, allin 2%

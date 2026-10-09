@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.claude/
+backups/
+
+# third-party PokerBench data and generated training rows (hundreds of MB); regenerate with convert_pokerbench.py / gen_*.py
+data/*.csv
+data/*.jsonl
+
+# model weights (808 MB, over GitHub's 100 MB limit); config and training log are kept
+checkpoints/*/model.safetensors
+checkpoints/*/encoder/
+checkpoints/*/tokenizer/
+
+# per-decision logs (62 MB); the .txt summaries next to them are kept
+sim_logs/*.jsonl

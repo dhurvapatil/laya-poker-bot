@@ -1,0 +1,68 @@
+# 2026-09-28 fine-tuned Laya (checkpoints/laya-poker-flat) sims, post all-in engine fix. seed 1, 1000 deals x 2 seats.
+# Decision logs: sim_logs/*.jsonl
+
+
+A=laya:rich=1,model=checkpoints/laya-poker-flat vs B=pot_odds | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: -52.2 bb/100 (95% CI +/- 69.4)
+CI crosses 0 -> not significant, run more deals
+
+Laya (A): 6167 decisions | latency p50 35.3 ms, p95 57.2 ms | mean answer_confidence 0.77 | max state tokens 218
+  preflop  check 36%, fold 24%, call 24%, two_thirds_pot 7%, third_pot 6%, pot 2%, allin 1%
+  flop     check 47%, third_pot 15%, fold 15%, call 13%, two_thirds_pot 9%, pot 1%, allin 0%
+  turn     check 53%, two_thirds_pot 14%, fold 13%, call 12%, third_pot 3%, pot 3%, allin 1%
+  river    check 51%, two_thirds_pot 23%, fold 14%, call 8%, allin 1%, third_pot 1%, pot 1%
+======
+
+A=laya:range=1,guard=1 vs B=pot_odds | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +91.8 bb/100 (95% CI +/- 68.6)
+
+Laya (A): 6766 decisions | latency p50 32.2 ms, p95 57.6 ms | mean answer_confidence 0.51 | max state tokens 218
+  preflop  call 38%, pot 26%, check 14%, third_pot 12%, two_thirds_pot 7%, fold 3%, allin 0%
+  flop     check 34%, pot 21%, call 18%, fold 14%, third_pot 7%, two_thirds_pot 6%, allin 1%
+  turn     check 43%, call 15%, fold 15%, pot 14%, third_pot 6%, two_thirds_pot 5%, allin 2%
+  river    check 52%, fold 17%, pot 11%, call 11%, third_pot 4%, two_thirds_pot 3%, allin 3%
+======
+NOT FINISHED (stopped by user): ft vs laya:range=1,guard=1 at 350/1000 deals; laya:rich=1,guard=1,ft vs pot_odds at 400/1000 deals.
+sim.py only prints win rate at the end, so no numbers for these. Logs are partial.
+
+Preflop leak (ft_vs_potodds.jsonl): FT folded 541 of 1226 preflop spots facing a bet; 452 were
+SB folds to a 0.5 bb complete, all marked "needs 25% equity: profitable". Model was never trained on preflop.
+
+Ops note: >2 Laya models at once overflows the 8 GB GPU -> laya silently falls back to CPU (~1.8 s/decision
+instead of ~30 ms). Run at most 2 models concurrently.
+======
+2026-09-28 20:50: rerun of laya:rich=1,guard=1,model=checkpoints/laya-poker-flat vs pot_odds, seed 1, split in 2 parallel
+processes (sim.py --start 0 / --start 500, 500 deals each; same 1000 deals as above). Logs: sim_logs/ftguard_vs_potodds_{0,500}.*
+  deals   0-499: -215.4 +/- 108.7
+  deals 500-999:  -88.6 +/- 108.8
+  combined (1000 deals, 2000 hands): -152 +/- 77 bb/100  -> significant LOSS, worse than unguarded FT (-52 +/- 69)
+Guard (guard_stats.py): changes ~18% of moves; mostly blocks folds "well ahead of the price" (823) and weak bets (527).
+Likely cause: no range=1, so the guard judges folds with equity vs a RANDOM hand. pot_odds only bets with strong hands,
+so the guard forces calls that are actually behind. The base +92 run used range=1.
+Still not run: ft vs laya:range=1,guard=1.
+======
+2026-09-28 21:00-21:50: new laya option preflop=1 (pot-odds rule preflop). seed 1, 1000 deals x 2 seats each.
+FT = laya:rich=1,range=1,guard=1,model=checkpoints/laya-poker-flat.  Logs: sim_logs/ft_rg*.txt, sim_logs/g_*.txt
+  vs pot_odds:  FT +62 +/- 55 | FT,preflop=1 +116 +/- 50 | pot_odds:range=1 (no model) +244 +/- 65
+  vs pot_odds:range=1:  FT,preflop=1 -24 +/- 22 | FT,preflop=1,alpha=0.5 -10 +/- 18
+Gauntlet (A = FT,preflop=1,alpha=0.5  vs  A = pot_odds:range=1):
+  calling_station  +293 +/- 50  vs  +504 +/- 53
+  random           +646 +/- 108 vs  +574 +/- 103
+  laya:range=1,guard=1 (base)  +62 +/- 32  vs  +79 +/- 45
+Takeaway: range-equity math is the strongest bot; Laya adds nothing over it and leaves value vs weak players
+(checks ~60% postflop, under-value-bets). preflop=1 is a clear win for the FT checkpoint (+62 -> +116).
+======
+2026-09-28 ~22:00: FT vs normal Laya heads-up, best configs, seed 1, 2000 deals x 2 seats = 4000 hands. Log: sim_logs/ft_vs_base_best.txt
+  A = laya:rich=1,range=1,guard=1,preflop=1,model=checkpoints/laya-poker-flat
+  B = laya:range=1,guard=1 (zero-shot convaiinnovations/laya)
+  A win rate: +55.2 +/- 31.6 bb/100 -> FT wins, significant. Running rate stayed +55..+84 the whole match.
+======
+2026-09-29 22:35-22:52: does sampling help? GREEDY (sim.py --greedy, argmax) vs pot_odds:range=1, seed 1, 2000 deals x 2 seats = 4000 hands.
+Run in parallel (2 models on GPU). agents.py as of 2026-09-28 21:00 (before the PotOddsAgent edits of 09-29).
+Logs: sim_logs/greedy_rgp_vs_rpotodds.{txt,jsonl}, sim_logs/greedy_rp_vs_rpotodds.{txt,jsonl}
+  A = laya:rich=1,range=1,guard=1,preflop=1,model=checkpoints/laya-poker-flat   greedy  -38.8 +/- 18.6  (first 1000 deals -31.8)
+  A = laya:rich=1,range=1,preflop=1,model=checkpoints/laya-poker-flat (no guard) greedy  -15.2 +/- 20.5  (first 1000 deals -11.2)
+  compare sampled, same first 1000 deals: guard -23.9 +/- 22.3; guard,alpha=0.5 -9.8 +/- 18.4
+Takeaway: greedy does not help (guarded greedy is significantly losing, a bit worse than sampled). Greedy is even more
+passive (river check 71% guarded). Without the guard greedy is -15 (n.s.); guard vs no guard differs by ~24 bb/100
+on the same cards (borderline, CIs overlap), so the guard is at best useless vs this opponent. Neither beats the math bot.

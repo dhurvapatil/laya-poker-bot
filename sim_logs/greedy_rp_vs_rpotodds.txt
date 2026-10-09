@@ -1,0 +1,52 @@
+/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+  ... 50/2000 deals, A -17.4 bb/100 so far
+  ... 100/2000 deals, A -1.7 bb/100 so far
+  ... 150/2000 deals, A -0.1 bb/100 so far
+  ... 200/2000 deals, A -1.1 bb/100 so far
+  ... 250/2000 deals, A -9.2 bb/100 so far
+  ... 300/2000 deals, A -26.9 bb/100 so far
+  ... 350/2000 deals, A -20.7 bb/100 so far
+  ... 400/2000 deals, A -18.9 bb/100 so far
+  ... 450/2000 deals, A -13.9 bb/100 so far
+  ... 500/2000 deals, A -14.7 bb/100 so far
+  ... 550/2000 deals, A -18.7 bb/100 so far
+  ... 600/2000 deals, A -17.8 bb/100 so far
+  ... 650/2000 deals, A -20.1 bb/100 so far
+  ... 700/2000 deals, A -15.2 bb/100 so far
+  ... 750/2000 deals, A -14.3 bb/100 so far
+  ... 800/2000 deals, A -13.2 bb/100 so far
+  ... 850/2000 deals, A -14.7 bb/100 so far
+  ... 900/2000 deals, A -15.4 bb/100 so far
+  ... 950/2000 deals, A -14.5 bb/100 so far
+  ... 1000/2000 deals, A -11.2 bb/100 so far
+  ... 1050/2000 deals, A -16.7 bb/100 so far
+  ... 1100/2000 deals, A -17.6 bb/100 so far
+  ... 1150/2000 deals, A -19.1 bb/100 so far
+  ... 1200/2000 deals, A -16.0 bb/100 so far
+  ... 1250/2000 deals, A -17.8 bb/100 so far
+  ... 1300/2000 deals, A -24.0 bb/100 so far
+  ... 1350/2000 deals, A -21.1 bb/100 so far
+  ... 1400/2000 deals, A -20.9 bb/100 so far
+  ... 1450/2000 deals, A -20.3 bb/100 so far
+  ... 1500/2000 deals, A -13.5 bb/100 so far
+  ... 1550/2000 deals, A -16.4 bb/100 so far
+  ... 1600/2000 deals, A -16.5 bb/100 so far
+  ... 1650/2000 deals, A -19.8 bb/100 so far
+  ... 1700/2000 deals, A -20.9 bb/100 so far
+  ... 1750/2000 deals, A -20.7 bb/100 so far
+  ... 1800/2000 deals, A -18.8 bb/100 so far
+  ... 1850/2000 deals, A -17.9 bb/100 so far
+  ... 1900/2000 deals, A -14.6 bb/100 so far
+  ... 1950/2000 deals, A -14.3 bb/100 so far
+  ... 2000/2000 deals, A -15.2 bb/100 so far
+
+A=laya:rich=1,range=1,preflop=1,model=checkpoints/laya-poker-flat vs B=pot_odds:range=1 | 2000 deals x 2 seats = 4000 hands | seed 1 | greedy
+A win rate: -15.2 bb/100 (95% CI +/- 20.5)
+CI crosses 0 -> not significant, run more deals
+
+Laya (A): 15077 decisions | latency p50 29.4 ms, p95 68.3 ms | mean answer_confidence 0.85 | max state tokens 231
+  preflop  call 57%, check 23%, third_pot 15%, pot 3%, fold 2%, allin 1%
+  flop     check 59%, fold 16%, call 13%, third_pot 8%, two_thirds_pot 3%
+  turn     check 68%, fold 10%, call 10%, two_thirds_pot 10%, third_pot 2%, pot 0%
+  river    check 61%, two_thirds_pot 21%, fold 11%, call 6%, allin 1%

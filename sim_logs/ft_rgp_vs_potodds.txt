@@ -1,0 +1,31 @@
+/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+  ... 50/1000 deals, A -16.7 bb/100 so far
+  ... 100/1000 deals, A +50.8 bb/100 so far
+  ... 150/1000 deals, A +83.3 bb/100 so far
+  ... 200/1000 deals, A +96.3 bb/100 so far
+  ... 250/1000 deals, A +100.6 bb/100 so far
+  ... 300/1000 deals, A +77.5 bb/100 so far
+  ... 350/1000 deals, A +100.1 bb/100 so far
+  ... 400/1000 deals, A +83.1 bb/100 so far
+  ... 450/1000 deals, A +82.0 bb/100 so far
+  ... 500/1000 deals, A +76.2 bb/100 so far
+  ... 550/1000 deals, A +84.5 bb/100 so far
+  ... 600/1000 deals, A +73.8 bb/100 so far
+  ... 650/1000 deals, A +88.1 bb/100 so far
+  ... 700/1000 deals, A +89.0 bb/100 so far
+  ... 750/1000 deals, A +114.1 bb/100 so far
+  ... 800/1000 deals, A +113.9 bb/100 so far
+  ... 850/1000 deals, A +109.1 bb/100 so far
+  ... 900/1000 deals, A +124.1 bb/100 so far
+  ... 950/1000 deals, A +119.7 bb/100 so far
+  ... 1000/1000 deals, A +116.4 bb/100 so far
+
+A=laya:rich=1,range=1,guard=1,preflop=1,model=checkpoints/laya-poker-flat vs B=pot_odds | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +116.4 bb/100 (95% CI +/- 50.5)
+
+Laya (A): 7625 decisions | latency p50 28.0 ms, p95 51.1 ms | mean answer_confidence 0.86 | max state tokens 231
+  preflop  call 58%, check 22%, third_pot 14%, pot 3%, fold 1%, allin 1%
+  flop     check 54%, fold 19%, call 14%, third_pot 7%, two_thirds_pot 5%, pot 1%, allin 0%
+  turn     check 60%, fold 14%, call 13%, two_thirds_pot 8%, third_pot 3%, pot 2%, allin 0%
+  river    check 62%, fold 16%, two_thirds_pot 14%, call 7%, allin 1%, pot 0%, third_pot 0%

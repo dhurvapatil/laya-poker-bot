@@ -1,0 +1,32 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1944.51it/s]
+/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+  ... 50/1000 deals, A +88.4 bb/100 so far
+  ... 100/1000 deals, A +227.7 bb/100 so far
+  ... 150/1000 deals, A +188.9 bb/100 so far
+  ... 200/1000 deals, A +190.9 bb/100 so far
+  ... 250/1000 deals, A +169.1 bb/100 so far
+  ... 300/1000 deals, A +130.6 bb/100 so far
+  ... 350/1000 deals, A +109.2 bb/100 so far
+  ... 400/1000 deals, A +88.8 bb/100 so far
+  ... 450/1000 deals, A +71.3 bb/100 so far
+  ... 500/1000 deals, A +84.6 bb/100 so far
+  ... 550/1000 deals, A +87.0 bb/100 so far
+  ... 600/1000 deals, A +87.8 bb/100 so far
+  ... 650/1000 deals, A +92.1 bb/100 so far
+  ... 700/1000 deals, A +94.1 bb/100 so far
+  ... 750/1000 deals, A +97.1 bb/100 so far
+  ... 800/1000 deals, A +89.2 bb/100 so far
+  ... 850/1000 deals, A +94.9 bb/100 so far
+  ... 900/1000 deals, A +93.6 bb/100 so far
+  ... 950/1000 deals, A +88.6 bb/100 so far
+  ... 1000/1000 deals, A +79.1 bb/100 so far
+
+A=pot_odds:range=1 vs B=laya:range=1,guard=1 | 1000 deals x 2 seats = 2000 hands | seed 1
+A win rate: +79.1 bb/100 (95% CI +/- 44.5)
+
+Laya (B): 6033 decisions | latency p50 25.2 ms, p95 26.2 ms | mean answer_confidence 0.50 | max state tokens 218
+  preflop  call 37%, pot 27%, check 14%, third_pot 10%, two_thirds_pot 8%, fold 3%, allin 0%
+  flop     check 36%, pot 23%, call 14%, fold 12%, third_pot 8%, two_thirds_pot 6%, allin 1%
+  turn     check 55%, pot 13%, fold 11%, call 11%, third_pot 7%, two_thirds_pot 4%, allin 1%
+  river    check 64%, fold 14%, pot 10%, call 6%, two_thirds_pot 3%, third_pot 3%, allin 1%

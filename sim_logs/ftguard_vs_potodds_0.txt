@@ -1,0 +1,21 @@
+/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+  ... 50/500 deals
+  ... 100/500 deals
+  ... 150/500 deals
+  ... 200/500 deals
+  ... 250/500 deals
+  ... 300/500 deals
+  ... 350/500 deals
+  ... 400/500 deals
+  ... 450/500 deals
+  ... 500/500 deals
+
+A=laya:rich=1,guard=1,model=checkpoints/laya-poker-flat vs B=pot_odds | 500 deals x 2 seats = 1000 hands | seed 1
+A win rate: -215.4 bb/100 (95% CI +/- 108.7)
+
+Laya (A): 3779 decisions | latency p50 39.8 ms, p95 50.0 ms | mean answer_confidence 0.78 | max state tokens 218
+  preflop  call 41%, check 35%, fold 7%, third_pot 7%, two_thirds_pot 6%, pot 3%
+  flop     check 50%, call 16%, fold 14%, third_pot 11%, two_thirds_pot 6%, pot 1%
+  turn     check 56%, call 20%, two_thirds_pot 11%, fold 8%, third_pot 3%, pot 3%, allin 0%
+  river    check 55%, two_thirds_pot 17%, call 15%, fold 9%, allin 3%, pot 1%, third_pot 1%

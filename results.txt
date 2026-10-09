@@ -1,0 +1,30 @@
+
+A=laya vs B=pot_odds | 500 deals x 2 seats = 1000 hands | seed 1
+A win rate: -1469.2 bb/100 (95% CI +/- 227.1)
+
+Laya (A): 2562 decisions | latency p50 23.2 ms, p95 25.5 ms | mean answer_confidence 0.53 | max state tokens 187
+  preflop  pot 37%, call 30%, half_pot 16%, allin 8%, check 5%, fold 4%
+  flop     pot 47%, half_pot 20%, allin 13%, call 10%, check 7%, fold 4%
+  turn     pot 41%, half_pot 16%, allin 15%, call 14%, check 7%, fold 6%
+  river    pot 52%, call 15%, half_pot 14%, allin 9%, check 7%, fold 4%
+======
+
+A=laya vs B=calling_station | 500 deals x 2 seats = 1000 hands | seed 1
+A win rate: -2051.6 bb/100 (95% CI +/- 199.3)
+
+Laya (A): 3293 decisions | latency p50 23.4 ms, p95 25.4 ms | mean answer_confidence 0.55 | max state tokens 181
+  preflop  pot 39%, call 25%, half_pot 19%, allin 8%, check 6%, fold 4%
+  flop     pot 55%, half_pot 21%, allin 13%, check 11%
+  turn     pot 53%, half_pot 19%, allin 17%, check 10%
+  river    pot 60%, half_pot 17%, allin 15%, check 8%
+======
+
+A=laya vs B=calling_station | 500 deals x 2 seats = 1000 hands | seed 1 | greedy
+A win rate: +48.6 bb/100 (95% CI +/- 233.3)
+CI crosses 0 -> not significant, run more deals
+
+Laya (A): 4000 decisions | latency p50 23.5 ms, p95 25.9 ms | mean answer_confidence 0.56 | max state tokens 181
+  preflop  call 50%, pot 50%
+  flop     pot 100%
+  turn     pot 100%
+  river    pot 100%
