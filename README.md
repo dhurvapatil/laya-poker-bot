@@ -133,3 +133,10 @@ FT best (`rich=1,range=1,guard=1,preflop=1`) vs zero-shot best (`laya:range=1,gu
 
 Round 3 (`run_round3.sh`) is not finished: rollout labels from the value/bluff bot plus preflop labels, then a
 warm-start fine-tune from `laya-poker-flat`. Plan is in `FINETUNE_PLAN.md`.
+
+## License and third-party components
+
+Code in this repo is MIT licensed (see [LICENSE](LICENSE)).
+
+- **Laya** ([`convaiinnovations/laya`](https://huggingface.co/convaiinnovations/laya)) is a third-party model released under Apache-2.0. Its weights are not included here; they are downloaded at runtime.
+- **PokerBench** solver-labelled data is used for fine-tuning via `convert_pokerbench.py`. It is not redistributed in this repo; obtain it from its original source under its own terms.

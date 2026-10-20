@@ -1,4 +1,4 @@
-/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+<repo>/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
   return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
   ... 50/1000 deals, A +88.8 bb/100 so far
   ... 100/1000 deals, A +40.9 bb/100 so far

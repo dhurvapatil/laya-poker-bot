@@ -29,7 +29,7 @@ Do not tune anything to make zero-shot Laya look good.
 
 ## Environment (verified)
 
-- Dir: `/home/dhruva/workspace/poker_bot`. It has `pyproject.toml` (deps: `laya>=0.3.20`), `uv.lock` and `.venv`.
+- Dir: `<repo>`. It has `pyproject.toml` (deps: `laya>=0.3.20`), `uv.lock` and `.venv`.
 - Python 3.14.7. PyPI has torch 2.14.0 cp314 wheels, and the default Linux wheel is CUDA-enabled.
 - GPU: RTX 4060 Laptop, 8 GB, driver 610 (CUDA 13).
 - `uv sync` failed **twice** with a TLS error ("cannot decrypt peer's message") while downloading the large

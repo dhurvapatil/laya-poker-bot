@@ -1,5 +1,5 @@
 Fetching 38 files:   0%|          | 0/38 [00:00<?, ?it/s]Fetching 38 files: 100%|██████████| 38/38 [00:00<00:00, 1715.68it/s]
-/home/dhruva/workspace/poker_bot/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+<repo>/.venv/lib/python3.12/site-packages/laya/agent.py:928: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
   return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
 trainable 124M of 421M params
 step 0 (zero-shot): val loss 1.745, solver-match accuracy 26.0%
